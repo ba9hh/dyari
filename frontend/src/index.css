@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+  font-family: crimsontext;
+  src: url(./assets/fonts/CrimsonText-Regular.ttf);
+}
+.crimsonText{
+  font-family: crimsontext;
+}
+
+@tailwind utilities;
