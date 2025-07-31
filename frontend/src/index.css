@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+  font-family: crimsontext;
+  src: url(./assets/fonts/CrimsonText-Regular.ttf);
+}
+.crimsonText{
+  font-family: crimsontext;
+}
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+@tailwind utilities;

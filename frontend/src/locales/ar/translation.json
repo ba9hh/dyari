@@ -1,0 +1,62 @@
+{
+  "navbar": {
+    "home": "الرئيسية",
+    "about": "حول",
+    "contact": "اتصل بنا",
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج"
+  },
+  "auth": {
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "signup": "إنشاء حساب",
+    "alreadyHaveAccount": "هل لديك حساب بالفعل؟",
+    "dontHaveAccount": "ليس لديك حساب بعد؟"
+  },
+  "homepage": {
+    "welcome": "مرحبًا بك في دياري",
+    "welcomeMessage": "قم بطلباتك لجميع مناسباتك الخاصة!",
+    "searchPlaceholder": "ابحث عن منزل...",
+    "allCountries": "جميع البلدان",
+    "cities": {
+      "Tunis": "تونس",
+      "Ariana": "أريانة",
+      "Manouba": "منوبة",
+      "Ben Arous": "بن عروس",
+      "Nabeul": "نابل",
+      "Bizerte": "بنزرت",
+      "Zaghouan": "زغوان",
+      "Sousse": "سوسة",
+      "Monastir": "المنستير",
+      "Mahdia": "المهدية",
+      "Sfax": "صفاقس",
+      "Béja": "باجة",
+      "Jendouba": "جندوبة",
+      "Le Kef": "الكاف",
+      "Siliana": "سليانة",
+      "Kairouan": "القيروان",
+      "Sidi Bouzid": "سيدي بوزيد",
+      "Kasserine": "القصرين",
+      "Gabès": "قابس",
+      "Médenine": "مدنين",
+      "Gafsa": "قفصة",
+      "Tozeur": "توزر",
+      "Tataouine": "تطاوين",
+      "Kébili": "قبلي"
+    }
+  },
+  "profile": {
+    "title": "ملفك الشخصي",
+    "edit": "تعديل الملف الشخصي",
+    "savedPosts": "المنازل المحفوظة"
+  },
+  "errors": {
+    "required": "هذا الحقل مطلوب",
+    "invalidEmail": "يرجى إدخال بريد إلكتروني صالح",
+    "serverError": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
+  },
+  "order": {
+    "allOrders": "كل الطلبات",
+    "pendingOrders": "الطلبات قيد الانتظار"
+  }
+}

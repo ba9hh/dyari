@@ -1,0 +1,62 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "login": "sign in",
+    "logout": "Logout"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "signup": "Sign Up",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?"
+  },
+  "homepage": {
+    "welcome": "Welcome to Dyari",
+    "welcomeMessage": "Place your orders for all your special occasions!",
+    "searchPlaceholder": "Search for a house...",
+    "allCountries": "All Countries",
+    "cities": {
+      "Tunis": "Tunis",
+      "Ariana": "Ariana",
+      "Manouba": "Manouba",
+      "Ben Arous": "Ben Arous",
+      "Nabeul": "Nabeul",
+      "Bizerte": "Bizerte",
+      "Zaghouan": "Zaghouan",
+      "Sousse": "Sousse",
+      "Monastir": "Monastir",
+      "Mahdia": "Mahdia",
+      "Sfax": "Sfax",
+      "Béja": "Béja",
+      "Jendouba": "Jendouba",
+      "Le Kef": "Le Kef",
+      "Siliana": "Siliana",
+      "Kairouan": "Kairouan",
+      "Sidi Bouzid": "Sidi Bouzid",
+      "Kasserine": "Kasserine",
+      "Gabès": "Gabès",
+      "Médenine": "Médenine",
+      "Gafsa": "Gafsa",
+      "Tozeur": "Tozeur",
+      "Tataouine": "Tataouine",
+      "Kébili": "Kébili"
+    }
+  },
+  "profile": {
+    "title": "Your Profile",
+    "edit": "Edit Profile",
+    "savedPosts": "Saved Houses"
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address",
+    "serverError": "Something went wrong. Please try again."
+  },
+  "order": {
+    "allOrders": "All Orders",
+    "pendingOrders": "Pending Orders"
+  }
+}

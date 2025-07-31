@@ -1,0 +1,62 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "login": "se connecter",
+    "logout": "Déconnexion"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Mot de passe",
+    "signup": "S'inscrire",
+    "alreadyHaveAccount": "Vous avez déjà un compte ?",
+    "dontHaveAccount": "Vous n'avez pas encore de compte ?"
+  },
+  "homepage": {
+    "welcome": "Bienvenue chez Dyari",
+    "welcomeMessage": "Passez vos commandes pour toutes vos occasions spéciales !",
+    "searchPlaceholder": "Rechercher une maison...",
+    "allCountries": "Tous les pays",
+    "cities": {
+      "Tunis": "Tunis",
+      "Ariana": "Ariana",
+      "Manouba": "Manouba",
+      "Ben Arous": "Ben Arous",
+      "Nabeul": "Nabeul",
+      "Bizerte": "Bizerte",
+      "Zaghouan": "Zaghouan",
+      "Sousse": "Sousse",
+      "Monastir": "Monastir",
+      "Mahdia": "Mahdia",
+      "Sfax": "Sfax",
+      "Béja": "Béja",
+      "Jendouba": "Jendouba",
+      "Le Kef": "Le Kef",
+      "Siliana": "Siliana",
+      "Kairouan": "Kairouan",
+      "Sidi Bouzid": "Sidi Bouzid",
+      "Kasserine": "Kasserine",
+      "Gabès": "Gabès",
+      "Médenine": "Médenine",
+      "Gafsa": "Gafsa",
+      "Tozeur": "Tozeur",
+      "Tataouine": "Tataouine",
+      "Kébili": "Kébili"
+    }
+  },
+  "profile": {
+    "title": "Votre profil",
+    "edit": "Modifier le profil",
+    "savedPosts": "Maisons enregistrées"
+  },
+  "errors": {
+    "required": "Ce champ est obligatoire",
+    "invalidEmail": "Veuillez entrer une adresse email valide",
+    "serverError": "Une erreur est survenue. Veuillez réessayer."
+  },
+  "order": {
+    "allOrders": "Tous les orders",
+    "pendingOrders": "Orders en attente"
+  }
+}
