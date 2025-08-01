@@ -1,7 +1,7 @@
 import ArticleShop from "./ArticleShop";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import ShopArticles from "../../components/shopArticles";
+import ShopArticles from "../../components/ShopArticles";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import Pagination from "../../components/Pagination";
