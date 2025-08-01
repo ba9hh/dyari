@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 import VerifyEmail from "./verifyEmail";
 import RequestCode from "./RequestCode";
-import ResetPassword from "./resetPassword";
+import ResetPassword from "./ResetPassword";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Dyari from "../components/Dyari";
 
