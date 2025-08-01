@@ -69,7 +69,7 @@ const InformationShop = ({ onDone, setFormData }) => {
     let doesExist = false;
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/shop/check-email",
+        "https://dyari.onrender.com/api/shop/check-email",
         {
           email: data.email,
         }

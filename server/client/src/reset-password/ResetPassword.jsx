@@ -15,7 +15,7 @@ const ResetPassword = ({ onDone, email }) => {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-      await axios.post("http://localhost:3000/api/shop/reset-password", {
+      await axios.post("https://dyari.onrender.com/api/shop/reset-password", {
         email,
         newPassword: data.newPassword,
       });

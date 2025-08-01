@@ -19,7 +19,7 @@ const RatingTest = ({ shopId }) => {
         setCanRate(null); // loading state
         try {
           const res = await axios.get(
-            `http://localhost:3000/api/shop/${shopId}/can-rate`,
+            `https://dyari.onrender.com/api/shop/${shopId}/can-rate`,
             { withCredentials: true }
           );
           setCanRate(res.data.canRate);
@@ -27,7 +27,7 @@ const RatingTest = ({ shopId }) => {
           // fetch existing rating if user can rate
           if (res.data.canRate) {
             const { data } = await axios.get(
-              `http://localhost:3000/api/shop/${shopId}/rating`,
+              `https://dyari.onrender.com/api/shop/${shopId}/rating`,
               { withCredentials: true }
             );
 
@@ -86,7 +86,7 @@ const RatingTest = ({ shopId }) => {
     setSubmitting(true);
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/shop/${shopId}/rate`,
+        `https://dyari.onrender.com/api/shop/${shopId}/rate`,
         { rating: rating },
         { withCredentials: true }
       );

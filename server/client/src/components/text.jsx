@@ -7,7 +7,7 @@ const Text = () => {
     useEffect(() => {
       // Fetch images from backend
       axios
-        .get('http://localhost:3000/images')
+        .get('https://dyari.onrender.com/images')
         .then((response) => {
           setImages(response.data);
         })

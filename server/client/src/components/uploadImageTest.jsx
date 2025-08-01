@@ -16,7 +16,7 @@ const CreateShop = () => {
     formData.append('image', file);
 
     try {
-      const response = await axios.post('http://localhost:3000/upload', formData, {
+      const response = await axios.post('https://dyari.onrender.com/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setImageUrl(response.data.url);

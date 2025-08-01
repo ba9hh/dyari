@@ -16,7 +16,7 @@ const DeleteShop = () => {
   const handleDelete = async () => {
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:3000/api/user`, {
+      await axios.delete(`https://dyari.onrender.com/api/user`, {
         withCredentials: true,
       });
     } catch (error) {

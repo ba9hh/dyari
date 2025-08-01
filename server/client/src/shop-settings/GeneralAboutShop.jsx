@@ -32,7 +32,7 @@ const GeneralAboutShop = ({ shopId }) => {
     const fetchShopInformation = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/shop/${shopId}/information`
+          `https://dyari.onrender.com/api/shop/${shopId}/information`
         );
         setUser(response.data);
         setName(response.data.name);
@@ -47,7 +47,7 @@ const GeneralAboutShop = ({ shopId }) => {
     fetchShopInformation();
   }, [shopId]);
   const saveField = async (field, value) => {
-    await axios.put(`http://localhost:3000/api/shop/information`, {
+    await axios.put(`https://dyari.onrender.com/api/shop/information`, {
       [field]: value,
     });
     if (

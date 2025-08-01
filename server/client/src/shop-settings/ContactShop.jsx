@@ -58,7 +58,7 @@ const ContactShop = ({ shopId }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/shop/${shopId}/additional-info`)
+      .get(`https://dyari.onrender.com/api/shop/${shopId}/additional-info`)
       .then((res) => {
         const data = res.data.data || {};
         const newVals = { ...values };
@@ -84,7 +84,7 @@ const ContactShop = ({ shopId }) => {
     const updatePayload = { [field]: values[field] };
 
     const response = await axios.put(
-      `http://localhost:3000/api/shop/${shopId}/additional-info`,
+      `https://dyari.onrender.com/api/shop/${shopId}/additional-info`,
       updatePayload
     );
 
@@ -101,7 +101,7 @@ const ContactShop = ({ shopId }) => {
 
  const deleteField = async (field) => {
   try {
-    await axios.delete(`http://localhost:3000/api/shop/${shopId}/additional-info`, {
+    await axios.delete(`https://dyari.onrender.com/api/shop/${shopId}/additional-info`, {
       data: { field }, 
     });
 

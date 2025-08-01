@@ -40,7 +40,7 @@ const VerifyEmail = ({ onDone, email }) => {
       const otpArray = inputRefs.current.map((e) => e.value);
       const otp = otpArray.join("");
       console.log(typeof otp);
-      const response = await axios.post("http://localhost:3000/api/verify", {
+      const response = await axios.post("https://dyari.onrender.com/api/verify", {
         email: email,
         verificationCode: otp,
       });

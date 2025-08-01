@@ -64,7 +64,7 @@ const Order = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/shop/${id}/articles?page=${page}&limit=${LIMIT}`
+          `https://dyari.onrender.com/api/shop/${id}/articles?page=${page}&limit=${LIMIT}`
         );
         setShopData(response.data.articles);
         setTotalPages(response.data.totalPages);
@@ -131,7 +131,7 @@ const Order = () => {
     };
     setLoading(true);
     try {
-      const res = await axios.post(`http://localhost:3000/api/order`, payload);
+      const res = await axios.post(`https://dyari.onrender.com/api/order`, payload);
       toast.success("Order added successfully!");
       console.log(res.data);
       reset();

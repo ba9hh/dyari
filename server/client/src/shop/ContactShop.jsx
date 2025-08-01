@@ -11,7 +11,7 @@ const ContactShop = ({ shopId }) => {
     const fetchShopInformation = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/shop/${shopId}/additional-info`
+          `https://dyari.onrender.com/api/shop/${shopId}/additional-info`
         );
         console.log(response.data.data);
         setAdditionalInfo(response.data.data);

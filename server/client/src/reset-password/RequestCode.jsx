@@ -20,7 +20,7 @@ const RequestCode = ({ onDone, setEmail }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/shop/check-email-and-create-verification",
+        "https://dyari.onrender.com/api/shop/check-email-and-create-verification",
         { email: data.email }
       );
       setEmail(data.email);

@@ -10,7 +10,7 @@ const LikedShopsShop = ({ shop,userId }) => {
   const toggleLike = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/user/${userId}/shop/${shop._id}`,
+        `https://dyari.onrender.com/api/user/${userId}/shop/${shop._id}`,
         {},
         { withCredentials: true }
       );

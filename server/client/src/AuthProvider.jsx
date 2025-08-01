@@ -14,7 +14,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     // Check for the authToken cookie by sending a request to the backend
     axios
-      .get("http://localhost:3000/api/validateToken", { withCredentials: true })
+      .get("https://dyari.onrender.com/api/validateToken", { withCredentials: true })
       .then((response) => {
         setUser(response.data.user);
         console.log(response.data);
@@ -30,7 +30,7 @@ const AuthProvider = ({ children }) => {
 
   const handleLogin = (credentials) => {
     axios
-      .post("http://localhost:3000/api/login", credentials, {
+      .post("https://dyari.onrender.com/api/login", credentials, {
         withCredentials: true,
       })
       .then((response) => {
@@ -51,7 +51,7 @@ const AuthProvider = ({ children }) => {
       const { credential } = googleResponse;
       // Send the token to your backend for validation
       const response = await axios.post(
-        "http://localhost:3000/api/auth/google",
+        "https://dyari.onrender.com/api/auth/google",
         { token: credential },
         { withCredentials: true }
       );
@@ -67,7 +67,7 @@ const AuthProvider = ({ children }) => {
 
   const handleLogout = () => {
     axios
-      .post("http://localhost:3000/api/logout", {}, { withCredentials: true })
+      .post("https://dyari.onrender.com/api/logout", {}, { withCredentials: true })
       .then(() => {
         setUser(null);
         navigate("/auth");

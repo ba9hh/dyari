@@ -25,7 +25,7 @@ const InformationShop = ({ shopId, handleChange, activeTab }) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/shop/${shopId}/information`
+          `https://dyari.onrender.com/api/shop/${shopId}/information`
         );
         setShop(response.data);
       } catch (error) {
@@ -37,7 +37,7 @@ const InformationShop = ({ shopId, handleChange, activeTab }) => {
     const fetchLikes = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/user/is-shop-liked/${shopId}`
+          `https://dyari.onrender.com/api/user/is-shop-liked/${shopId}`
         );
         if (response.data.liked) {
           setLiked(true);
@@ -60,7 +60,7 @@ const InformationShop = ({ shopId, handleChange, activeTab }) => {
     }
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/user/shop/${shopId}`,
+        `https://dyari.onrender.com/api/user/shop/${shopId}`,
         {},
         { withCredentials: true }
       );

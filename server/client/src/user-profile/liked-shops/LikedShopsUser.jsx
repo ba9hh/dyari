@@ -13,7 +13,7 @@ const LikedShopsUser = ({ userId }) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/user/liked-shops`
+          `https://dyari.onrender.com/api/user/liked-shops`
         );
         setLikedShops(response.data.likedShops);
       } catch (error) {

@@ -21,7 +21,7 @@ const ArticlesShop = ({ shopId }) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/shop/${shopId}/articles?page=${page}&limit=${LIMIT}`
+          `https://dyari.onrender.com/api/shop/${shopId}/articles?page=${page}&limit=${LIMIT}`
         );
         setArticles(response.data.articles);
         setTotalPages(response.data.totalPages);
@@ -46,7 +46,7 @@ const ArticlesShop = ({ shopId }) => {
   };
   const handleDeleteArticle = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/article/${id}`);
+      await axios.delete(`https://dyari.onrender.com/api/article/${id}`);
       setArticles((prev) => prev.filter((article) => article._id !== id));
       toast.success("Article deleted successfully");
     } catch (err) {

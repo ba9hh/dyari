@@ -32,7 +32,7 @@ const ChangePassword = () => {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-      await axios.post("http://localhost:3000/api/shop/update-password", {
+      await axios.post("https://dyari.onrender.com/api/shop/update-password", {
         currentPassword: data.oldPassword,
         newPassword: data.newPassword,
       });

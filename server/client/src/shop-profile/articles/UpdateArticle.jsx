@@ -38,7 +38,7 @@ const UpdateArticle = () => {
     if (!user) return;
     const fetchArticle = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/article/${articleId}`);
+        const res = await axios.get(`https://dyari.onrender.com/api/article/${articleId}`);
         const art = res.data;
         // only the shop owner can update
         if (art.shopId !== user._id) {
@@ -76,7 +76,7 @@ const UpdateArticle = () => {
       formData.append("image", file);
       try {
         const uploadRes = await axios.post(
-          "http://localhost:3000/upload",
+          "https://dyari.onrender.com/upload",
           formData,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
@@ -99,7 +99,7 @@ const UpdateArticle = () => {
 
     try {
       await axios.put(
-        `http://localhost:3000/api/article/${articleId}`,
+        `https://dyari.onrender.com/api/article/${articleId}`,
         payload
       );
       toast.success("Article updated successfully!");

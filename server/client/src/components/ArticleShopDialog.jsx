@@ -24,7 +24,7 @@ const ArticleShopDialog = ({ articleId, open, onClose }) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/article/${articleId}`
+          `https://dyari.onrender.com/api/article/${articleId}`
         );
         setArticle(response.data);
       } catch (err) {

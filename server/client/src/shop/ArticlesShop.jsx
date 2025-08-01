@@ -20,7 +20,7 @@ const ArticlesShop = ({ shopId }) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/shop/${shopId}/articles?page=${page}&limit=${LIMIT}`
+          `https://dyari.onrender.com/api/shop/${shopId}/articles?page=${page}&limit=${LIMIT}`
         );
         setArticles(response.data.articles);
         setTotalPages(response.data.totalPages);

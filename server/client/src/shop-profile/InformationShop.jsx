@@ -36,7 +36,7 @@ const InformationShop = ({ shopId, activeTab, handleChange }) => {
     const fetchShopInformation = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/shop/${shopId}/information`
+          `https://dyari.onrender.com/api/shop/${shopId}/information`
         );
         setUser(response.data);
       } catch (error) {
@@ -77,7 +77,7 @@ const InformationShop = ({ shopId, activeTab, handleChange }) => {
         imgFormData.append("image", file);
 
         const uploadRes = await axios.post(
-          "http://localhost:3000/upload",
+          "https://dyari.onrender.com/upload",
           imgFormData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -86,12 +86,12 @@ const InformationShop = ({ shopId, activeTab, handleChange }) => {
 
         const uploadedImageUrl = uploadRes.data.url;
 
-        await axios.put(`http://localhost:3000/api/shop/profile-picture`, {
+        await axios.put(`https://dyari.onrender.com/api/shop/profile-picture`, {
           newProfilePicture: uploadedImageUrl,
         });
         setUser((prev) => ({ ...prev, profilePicture: uploadedImageUrl }));
       } else if (chosenAvatar) {
-        await axios.put(`http://localhost:3000/api/shop/profile-picture`, {
+        await axios.put(`https://dyari.onrender.com/api/shop/profile-picture`, {
           newProfilePicture: chosenAvatar,
         });
         setUser((prev) => ({ ...prev, profilePicture: chosenAvatar }));

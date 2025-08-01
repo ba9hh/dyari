@@ -35,7 +35,7 @@ const ArticlesShop = ({ onDone, formData, setFormData }) => {
     }));
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/create-verification",
+        "https://dyari.onrender.com/api/create-verification",
         { email: formData.general.email }
       );
       onDone();

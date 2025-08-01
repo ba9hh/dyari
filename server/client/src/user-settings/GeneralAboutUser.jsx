@@ -12,7 +12,7 @@ const GeneralAboutUser = ({userId}) => {
     const fetchShopInformation = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/user/${userId}/information`
+          `https://dyari.onrender.com/api/user/${userId}/information`
         );
         setUser(response.data);
         setName(response.data.name);

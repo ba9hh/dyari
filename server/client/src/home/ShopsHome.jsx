@@ -53,7 +53,7 @@ const ShopsHome = () => {
       const page = searchParams.get("page") || 1;
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:3000/api/shops", {
+        const response = await axios.get("https://dyari.onrender.com/api/shops", {
           params: {
             type,
             localisation:

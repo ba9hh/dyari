@@ -31,7 +31,7 @@ const InformationUser = ({ userId, activeTab, handleChange }) => {
     const fetchUserInformation = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/user/${userId}/information`
+          `https://dyari.onrender.com/api/user/${userId}/information`
         );
         setUser(response.data);
       } catch (error) {
@@ -74,7 +74,7 @@ const InformationUser = ({ userId, activeTab, handleChange }) => {
         imgFormData.append("image", file);
 
         const uploadRes = await axios.post(
-          "http://localhost:3000/upload",
+          "https://dyari.onrender.com/upload",
           imgFormData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -84,12 +84,12 @@ const InformationUser = ({ userId, activeTab, handleChange }) => {
         const uploadedImageUrl = uploadRes.data.url;
 
         await axios.put(
-          `http://localhost:3000/api/user/${userId}/profile-picture`,
+          `https://dyari.onrender.com/api/user/${userId}/profile-picture`,
           { newProfilePicture: uploadedImageUrl }
         );
       } else if (chosenAvatar) {
         await axios.put(
-          `http://localhost:3000/api/user/${userId}/profile-picture`,
+          `https://dyari.onrender.com/api/user/${userId}/profile-picture`,
           { newProfilePicture: chosenAvatar }
         );
       }

@@ -33,7 +33,7 @@ const OrdersUser = ({ userId }) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/user/orders/${selectedFilter}?page=${page}&limit=${LIMIT}`
+          `https://dyari.onrender.com/api/user/orders/${selectedFilter}?page=${page}&limit=${LIMIT}`
         );
         setTotalPages(response.data.totalPages);
         setTodayOrders(response.data.today);

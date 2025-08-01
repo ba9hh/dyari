@@ -27,7 +27,7 @@ const Resultat = ({ formData }) => {
 
           try {
             const uploadRes = await axios.post(
-              "http://localhost:3000/upload",
+              "https://dyari.onrender.com/upload",
               imgFormData,
               {
                 headers: { "Content-Type": "multipart/form-data" },
@@ -49,7 +49,7 @@ const Resultat = ({ formData }) => {
         };
         try {
           const res = await axios.post(
-            "http://localhost:3000/api/create-shop",
+            "https://dyari.onrender.com/api/create-shop",
             fullData,
             {
               headers: { "Content-Type": "application/json" },

@@ -8,7 +8,7 @@ const OrderShop = ({ order, index }) => {
   const updateOrderState = async (newState) => {
     try {
       const response = await axios.patch(
-        `http://localhost:3000/api/order/${order._id}/state`,
+        `https://dyari.onrender.com/api/order/${order._id}/state`,
         { orderState: newState }
       );
       console.log("Order updated:", response.data);
