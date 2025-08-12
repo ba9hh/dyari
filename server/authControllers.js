@@ -35,6 +35,7 @@ exports.login = async (req, res) => {
             });
             return res.json({
                 message: 'Login successful',
+                token,
                 shop: {
                     _id: shop._id,
                     profilePicture: shop.profilePicture,
