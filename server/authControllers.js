@@ -79,11 +79,11 @@ exports.googleLogin = async (req, res) => {
             await user.save();
         } 
 
-        const jwtToken = jwt.sign({ userId: user._id, role: 'user' }, /*process.env.JWT_SECRET*/"Secret", {
+        const token = jwt.sign({ userId: user._id, role: 'user' }, /*process.env.JWT_SECRET*/"Secret", {
             expiresIn: '7d', 
         });
 
-        res.cookie('authToken', jwtToken, {
+        res.cookie('authToken', token, {
             httpOnly: true,
             maxAge: 7 * 24 * 60 * 60 * 1000, 
             sameSite: 'Strict',
@@ -92,6 +92,7 @@ exports.googleLogin = async (req, res) => {
         // Return user info
         res.status(200).json({
             message: 'Login successful',
+            token,
             user: {
                 _id: user._id,
                 profilePicture: user.profilePicture,
