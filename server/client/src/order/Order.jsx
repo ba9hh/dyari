@@ -131,9 +131,11 @@ const Order = () => {
     };
     setLoading(true);
     try {
-      const res = await axios.post(`https://dyari.onrender.com/api/order`, payload);
+      const res = await axios.post(
+        `https://dyari.onrender.com/api/order`,
+        payload
+      );
       toast.success("Order added successfully!");
-      console.log(res.data);
       reset();
     } catch (err) {
       console.error(err);
