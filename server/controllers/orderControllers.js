@@ -13,36 +13,38 @@ const transporter = nodemailer.createTransport({
 
 exports.createOrder = async (req, res) => {
     try {
-        const { shopId, userId,userNeededDate, userPhoneNumber, orderItems, orderTotalAmount } = req.body;
-        if (!shopId || !userId || !userPhoneNumber || !userNeededDate || !orderItems || !orderTotalAmount) {
-            return res.status(400).json({ message: 'All fields are required' });
-        }
-         const shop = await Shop.findById(shopId);
-        if (!shop) {
-            return res.status(404).json({ message: "Shop not found" });
-        }
+        // const { shopId, userId,userNeededDate, userPhoneNumber, orderItems, orderTotalAmount } = req.body;
+        // if (!shopId || !userId || !userPhoneNumber || !userNeededDate || !orderItems || !orderTotalAmount) {
+        //     return res.status(400).json({ message: 'All fields are required' });
+        // }
+        //  const shop = await Shop.findById(shopId);
+        // if (!shop) {
+        //     return res.status(404).json({ message: "Shop not found" });
+        // }
 
-        const newOrder = new Order({
-            shopId,
-            userId,
-            userPhoneNumber,
-            userNeededDate,
-            orderItems,
-            orderTotalAmount,
-            orderState: 'pending', 
-            orderDate: new Date(), 
-        });
+        // const newOrder = new Order({
+        //     shopId,
+        //     userId,
+        //     userPhoneNumber,
+        //     userNeededDate,
+        //     orderItems,
+        //     orderTotalAmount,
+        //     orderState: 'pending', 
+        //     orderDate: new Date(), 
+        // });
         const mailOptions = {
             from: 'zedtourheart@gmail.com',
-            to: shop.email,
+            // to: shop.email,
+            to: 'ezedinejlidi3@gmail.com',
             subject: 'Commande',
             text: `Vous avez une commande`,
         };
 
-        await newOrder.save();
+        // await newOrder.save();
         await transporter.sendMail(mailOptions);
 
-        res.status(201).json({ message: 'Order created successfully', order: newOrder });
+        // res.status(201).json({ message: 'Order created successfully', order: newOrder });
+        res.status(201).json({ message: 'Order created successfully' });
     } catch (error) {
         console.error('Error creating order:', error);
         res.status(500).json({ message: 'Internal server error' });
